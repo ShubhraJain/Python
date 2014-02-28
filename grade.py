@@ -28,6 +28,6 @@ print(read_grades('grades_file.txt'))
 def range_grades(grades):
 # Arrange the grades from the above list into their particular range and 
 # get the count of grades are in each range
-  print "haha"
-
+    print "haha"
+    print 'dekho baarish ho rahi hai ;)'
 # Writing the histogram
