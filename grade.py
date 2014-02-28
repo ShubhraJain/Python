@@ -8,7 +8,8 @@
 
 def read_grades(filename):
     """
-    Read the file and extract grades from each line and return a list containing all the grades.
+    Read the file and extract grades from each line and
+    return a list containing all the grades.
     """
     f = open(filename, 'r')
     grades = []
@@ -27,6 +28,6 @@ print(read_grades('grades_file.txt'))
 def range_grades(grades):
 # Arrange the grades from the above list into their particular range and 
 # get the count of grades are in each range
-  print "hehe"
+  print "haha"
 
 # Writing the histogram
