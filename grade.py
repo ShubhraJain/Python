@@ -33,8 +33,8 @@ def range_grades(grades):
     [0,0,0,1,1,0,0,1,0,0,0]
     """
     count_grades = [0] * 11
-    for i in range(len(grades)):
-        j = grades[i] // 10   
+    for i in grades:
+        j = i // 10   
         count_grades[j] += 1
     return count_grades
 
