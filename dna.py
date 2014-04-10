@@ -11,7 +11,7 @@ def get_length(dna):
 
     return len(dna)
 
-print("1st: ", get_length('ATCGAT'))
+# print("1st: ", get_length('ATCGAT'))
 
 def is_longer(dna1, dna2):
     """ (str, str) -> bool
@@ -26,7 +26,7 @@ def is_longer(dna1, dna2):
     """
 
     return dna1 > dna2
-print("2nd: ", is_longer('ATCG', 'AT'))
+#print("2nd: ", is_longer('ATCG', 'AT'))
 
 def count_nucleotides(dna, nucleotide):
     """ (str, str) -> int
@@ -44,7 +44,7 @@ def count_nucleotides(dna, nucleotide):
         if (c == nucleotide):
             count = count + 1
     return count
-print("3rd: ", count_nucleotides('ATCGGC', 'G'))
+#print("3rd: ", count_nucleotides('ATCGGC', 'G'))
 
 def contains_sequence(dna1, dna2):
     """ (str, str) -> bool
@@ -62,7 +62,7 @@ def contains_sequence(dna1, dna2):
         if (dna1[i:i+2] == dna2):
             return True
     return False
-print("4th: ", contains_sequence('ATCGGC', 'GG'))
+#print("4th: ", contains_sequence('ATCGGC', 'TA'))
 
 def is_valid_sequence(dna):
     """(str) -> bool
@@ -80,7 +80,7 @@ def is_valid_sequence(dna):
         if not (char == 'A' or char == 'T' or char == 'G' or char == 'C'):
             return False
     return sequence
-print("5th: ", is_valid_sequence('ATCCA'))
+#print("5th: ", is_valid_sequence('ATCCA'))
 
 def insert_sequence(dna, insert_sequence, index):
     """ (str, str, int) -> str
@@ -93,7 +93,7 @@ def insert_sequence(dna, insert_sequence, index):
     """
     return (dna[:index] + insert_sequence + dna[index:])
 
-print("6th: ", insert_sequence('ATCC', 'GC', 1))
+#print("6th: ", insert_sequence('ATCC', 'GC', 1))
     
 def get_complement(nucleotide):
     """ (str) -> str
@@ -114,7 +114,10 @@ def get_complement(nucleotide):
         print ('C')
     else:
         print ('G')
-get_complement('A')    
+#get_complement('A')
+#get_complement('T') 
+#get_complement('G') 
+#get_complement('C')     
 
 def get_complementary_sequence(dna):
     """ (str) -> str
@@ -136,6 +139,6 @@ def get_complementary_sequence(dna):
         else:
             l.append('C')
     return "".join(l)
-print("8th: ", get_complementary_sequence('ATGC'))
+#print("8th: ", get_complementary_sequence('ATGC'))
     
 
