@@ -1,5 +1,17 @@
 # To play the game, visit http://www.codeskulptor.org/#user29_ldOvao7Hqb_0.py
 
+# The rules of rock-paper-scissors-lizard-Spock are:
+# Scissors cut paper
+# Paper covers rock
+# Rock crushes lizard
+# Lizard poisons Spock
+# Spock smashes scissors
+# Scissors decapitate lizard
+# Lizard eats paper
+# Paper disproves Spock
+# Spock vaporizes rock
+# Rock crushes scissors
+
 # The key idea of this program is to equate the strings
 # "rock", "paper", "scissors", "lizard", "Spock" to numbers
 # as follows:
