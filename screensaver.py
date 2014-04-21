@@ -1,6 +1,5 @@
 # To view this, visit http://www.codeskulptor.org/#user30_sSZmxWaqA6DPshx.py
 
-# Import modules
 import simplegui
 import random
 
@@ -28,14 +27,14 @@ def draw(canvas):
     canvas.draw_text(message, position, 36, "Red")
 
 # Create a frame 
-    frame = simplegui.create_frame("Home", width, height)
+frame = simplegui.create_frame("Home", width, height)
 
 # Register event handlers
-    text = frame.add_input("Message:", update, 150)
-    frame.set_draw_handler(draw)
-    timer = simplegui.create_timer(interval, tick)
+text = frame.add_input("Message:", update, 150)
+frame.set_draw_handler(draw)
+timer = simplegui.create_timer(interval, tick)
 
 # Start the frame animation
-    frame.start()
-    timer.start()
+frame.start()
+timer.start()
 

@@ -2,7 +2,6 @@
 # input will come from buttons and an input field
 # all output for the game will be printed in the console
 
-# import modules
 import simplegui
 import random
 
@@ -27,6 +26,7 @@ def range1000():
 def input_guess(number):
     global remaining_guess 
     if (remaining_guess < 1):
+        print "Oops...You have lost the game!!!"
         return
     print "You entered: ", number
     number = int(number)   
@@ -44,12 +44,12 @@ def input_guess(number):
     print "number of remaining guesses is ", remaining_guess
 
 # create frame
-        f = simplegui.create_frame("Guess the number!", 250, 250)
+f = simplegui.create_frame("Guess the number!", 250, 250)
 
 # register event handlers for control elements
-        f.add_button("Range is [0, 100)", range100, 120)
-        f.add_button("Range is [0, 1000)", range1000, 120)
-        f.add_input("Enter the number", input_guess, 120)
+f.add_button("Range is [0, 100)", range100, 120)
+f.add_button("Range is [0, 1000)", range1000, 120)
+f.add_input("Enter the number", input_guess, 120)
 
 # start frame
-        f.start()
+f.start()

@@ -2,7 +2,6 @@
 # The game involved is, it draws the number of successful stops at a whole second versus the total number of stops and the 
 # score is shown on the top right corner of the canvas
 
-#import modules
 import simplegui
 
 # define global variables
@@ -72,16 +71,16 @@ def draw(canvas):
     canvas.draw_text(s, [220, 20], 20, "Red")
 
 # create frame
-    frame = simplegui.create_frame("Stop Watch", 275, 200)
+frame = simplegui.create_frame("Stop Watch", 275, 200)
 
 # register event handlers
-    frame.set_draw_handler(draw)
+frame.set_draw_handler(draw)
+    
+frame.add_button("Start", start, 100)
+frame.add_button("Stop", stop, 100)
+frame.add_button("Reset", reset, 100)
 
-    frame.add_button("Start", start, 100)
-    frame.add_button("Stop", stop, 100)
-    frame.add_button("Reset", reset, 100)
-
-    timer = simplegui.create_timer(100, increase_time)
+timer = simplegui.create_timer(100, increase_time)
 
 # start frame
-    frame.start()
+frame.start()
