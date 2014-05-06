@@ -15,7 +15,7 @@ def update(text):
     global message
     message = text
 
-# Handler for timer
+# Timer's handler
 def tick():
     x = random.randrange(0, width)
     y = random.randrange(0, height)
