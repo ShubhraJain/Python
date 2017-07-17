@@ -1,4 +1,7 @@
 class stack():
+    """
+    Stack data structure implementation using python
+    """
 
     def __init__(self):
         self.items = []
@@ -8,11 +11,12 @@ class stack():
         return self.items
 
     def pop(self):
-        if len(self.items) < 1:
-            print("Stack is empty")
+        if not self.items:
+            return None
         else:
+            a = self.items[len(self.items) - 1]
             self.items.pop()
-            return self.items
+            return a
 
 if __name__ == '__main__':
     st = stack()

@@ -1,4 +1,7 @@
 class queue():
+    """
+    Queue data structure implementation using python
+    """
 
     def __init__(self):
         self.items = []
@@ -8,11 +11,12 @@ class queue():
         return self.items
 
     def pop(self):
-        if len(self.items) < 1:
-            print("Queue is empty")
+        if not self.items:
+            return None
         else:
+            a = self.items[0]
             del self.items[0]
-            return self.items
+            return a
 
 if __name__ == '__main__':
     q = queue()
@@ -23,3 +27,4 @@ if __name__ == '__main__':
     print(q.pop())
     print(q.pop())
     print(q.pop())
+    print(q.items)
