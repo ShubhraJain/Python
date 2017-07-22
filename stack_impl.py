@@ -7,6 +7,9 @@ class stack():
         self.items = []
 
     def stack_length(self):
+        """
+        Finds length of the given stack
+        """
         l = len(self.items)
         if not self.items:
             return "Empty Stack"
@@ -17,10 +20,16 @@ class stack():
             pass
 
     def push(self, value):
+        """
+        Push value to the stack
+        """
         self.items.append(value)
         return self.items
 
     def pop(self):
+         """
+        Pops element from the stack
+        """
         if not self.items:
             return None
         else:
@@ -35,6 +44,9 @@ class stack():
             return self.items[-1]
 
     def min_element(self, stack_values):
+        """
+        Returns the smallest element in the stack
+        """
         self.items = stack_values
         if not self.items:
             print("Empty Stack")
