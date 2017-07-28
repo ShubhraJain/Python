@@ -10,7 +10,7 @@ class Node():
 
 class LinkList():
     """
-    Linklist data structure implementation
+    Linkedlist data structure implementation
     """
 
     def __init__(self):
@@ -19,8 +19,8 @@ class LinkList():
     def push(self, nd):
         """
         This function takes a node as an argument and 
-        makes it head of the linklist and points to the 
-        existing head of the linklist
+        makes it head of the linkedlist and points to the 
+        existing head of the linkedlist
         """
         if not self.head:
             self.head = nd
@@ -29,36 +29,36 @@ class LinkList():
             self.head = nd
             self.head.next = a
 
-    def append(self, value):
+    def append(self, nd):
         """
         This function takes a value, converts it into a 
-        node, appends it at the end of the linklist
+        node, appends it at the end of the linkedlist
         and returns the appended node
         """
-        new_node = Node(value)
         if self.head:
             cur = self.head
             while cur.next:
                 cur = cur.next
-            cur.next = new_node
+            cur.next = nd
         else:
-            self.head = new_node
-        return new_node
+            self.head = nd
+        return nd
 
     def insert(self, value, prev_node):
         """
         This function creates a node from the given 
         value argument and inserts it next to the 
-        given previous node
+        given previous node in the linkedlist
         """
         new_node = Node(value)
         new_node.next = prev_node.next
         prev_node.next = new_node
+        return new_node
 
     def find(self, value):
         """
         This function takes a value to be found in the 
-        existing linklist and returns node if it's found 
+        existing linkedlist and returns node if it's found 
         else returns None
         """
         if not self.head:
@@ -74,7 +74,7 @@ class LinkList():
 
     def tail(self):
         """
-        Returns the node at the tail of the linklist
+        Returns the node at the tail of the linkedlist
         """
         if not self.head:
             return None
@@ -85,7 +85,7 @@ class LinkList():
 
     def print(self):
         """
-        prints the linklist
+        prints the linkedlist
         """
         if not self.head:
             return "None"
@@ -96,15 +96,19 @@ class LinkList():
                 cur = cur.next
         print("")
 
+    def is_looped(self):
+        """
+        Returns true if linked list has a loop
+        """
+        next_pointer_list = []
+        if not self.head:
+           return None
+        cur = self.head
+        while cur:
+           if cur.next not in next_pointer_list:
+               next_pointer_list.append(cur.next)
+               cur = cur.next
+           else:
+               return True
+        return False
 
-llist = LinkList()
-llist1 = LinkList()
-llist1.push(Node(6))
-# n = Node(5)
-# llist.push(n)
-n = llist.append(1)
-llist.push(Node(7))
-llist.append(2)
-llist.append(3)
-llist.insert(4, n)
-print(llist.find(4))
